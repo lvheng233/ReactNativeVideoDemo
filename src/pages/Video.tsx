@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react';
 import { StatusBar, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function VideoPage() {
   const navigation = useNavigation();
@@ -14,9 +15,9 @@ function VideoPage() {
     return unsubscribe;
   }, [navigation]);
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>VideoPage!</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
